@@ -1,17 +1,25 @@
 import { Link } from 'react-router-dom'
+const links = [['/', 'Home'],['/projects','Works'],['/showcase','3D Lab'],['/about','About'],['/contact','Contact']]
 export default function Footer() {
-  const links = [['/', 'Home'],['/projects','Works'],['/showcase','3D Lab'],['/about','About'],['/contact','Contact']]
   return (
-    <footer style={{ borderTop:'1px solid rgba(255,255,255,0.05)', background:'rgba(0,0,0,0.28)', backdropFilter:'blur(24px)', WebkitBackdropFilter:'blur(24px)', padding:'44px var(--px)', display:'flex', flexWrap:'wrap', justifyContent:'space-between', alignItems:'center', gap:'20px', marginTop:'80px' }}>
-      <span style={{ fontSize:'11px', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.18)' }}>Harisankar S. © 2025</span>
-      <div style={{ display:'flex', gap:'28px' }}>
-        {links.map(([to, label]) => (
-          <Link key={to} to={to} style={{ fontSize:'11px', fontWeight:600, letterSpacing:'0.08em', textTransform:'uppercase', color:'rgba(255,255,255,0.25)', textDecoration:'none', transition:'color 0.2s' }}
-            onMouseEnter={e=>e.currentTarget.style.color='rgba(255,255,255,0.65)'}
-            onMouseLeave={e=>e.currentTarget.style.color='rgba(255,255,255,0.25)'}>{label}</Link>
-        ))}
+    <footer style={{ marginTop:'100px', borderTop:'1px solid rgba(255,255,255,0.045)', background:'rgba(0,0,0,0.25)', backdropFilter:'blur(28px)', WebkitBackdropFilter:'blur(28px)', padding:'48px var(--px)' }}>
+      <div style={{ display:'flex', flexWrap:'wrap', justifyContent:'space-between', alignItems:'center', gap:'24px' }}>
+        <div>
+          <div style={{ fontSize:'16px', fontWeight:900, letterSpacing:'-0.04em', background:'linear-gradient(135deg,#fff,rgba(255,255,255,0.5))', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', marginBottom:'4px' }}>MR.K</div>
+          <div style={{ fontSize:'10px', fontWeight:600, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.18)' }}>Harisankar S. © 2025</div>
+        </div>
+        <nav style={{ display:'flex', gap:'24px' }}>
+          {links.map(([to, label]) => (
+            <Link key={to} to={to} style={{ fontSize:'11px', fontWeight:600, letterSpacing:'0.09em', textTransform:'uppercase', color:'rgba(255,255,255,0.24)', textDecoration:'none', transition:'color 0.22s' }}
+              onMouseEnter={e=>e.currentTarget.style.color='rgba(255,255,255,0.70)'}
+              onMouseLeave={e=>e.currentTarget.style.color='rgba(255,255,255,0.24)'}>{label}</Link>
+          ))}
+        </nav>
+        <div style={{ display:'flex', flexDirection:'column', alignItems:'flex-end', gap:'4px' }}>
+          <div style={{ fontSize:'10px', color:'rgba(255,255,255,0.14)', letterSpacing:'0.06em' }}>React · Vite · GSAP</div>
+          <div style={{ fontSize:'10px', color:'rgba(255,255,255,0.10)', letterSpacing:'0.06em' }}>Trivandrum, Kerala · India</div>
+        </div>
       </div>
-      <span style={{ fontSize:'10px', color:'rgba(255,255,255,0.12)', letterSpacing:'0.04em' }}>React · Vite · GSAP</span>
     </footer>
   )
 }

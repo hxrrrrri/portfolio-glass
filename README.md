@@ -1,6 +1,6 @@
-# Portfolio — Glass Edition v2
+# Portfolio — Ultra Luxury Glass Edition
 
-Premium glassmorphism portfolio — full-width, luxury UI.
+Premium glassmorphism portfolio with custom cursor, page transitions, cinematic animations.
 
 ## Stack
 React 18 · React Router · Vite · Tailwind CSS · GSAP
@@ -10,6 +10,6 @@ React 18 · React Router · Vite · Tailwind CSS · GSAP
 npm install && npm run dev
 ```
 
-## Deploy on Vercel
-Import repo → Framework: Vite → Output: dist → Deploy.
+## Deploy
+Import to Vercel → Framework: Vite → Output: dist → Deploy.
 `vercel.json` included for SPA routing.
