@@ -1,35 +1,15 @@
-# Portfolio — Glass Edition
+# Portfolio — Glass Edition v2
 
-A premium glassmorphism portfolio built with React + Vite + GSAP.
+Premium glassmorphism portfolio — full-width, luxury UI.
 
 ## Stack
-- **React 18** + **React Router**
-- **Vite** — build tool
-- **Tailwind CSS** — utility classes
-- **GSAP** — animations
-- **Glass Design System** — custom CSS with backdrop-filter
+React 18 · React Router · Vite · Tailwind CSS · GSAP
 
-## Getting Started
-
+## Dev
 ```bash
-npm install
-npm run dev
+npm install && npm run dev
 ```
 
-## Build
-
-```bash
-npm run build
-```
-
-## Deploy
-
-Import this repo into [Vercel](https://vercel.com/new).
-- Framework: **Vite**
-- Build command: `npm run build`
-- Output directory: `dist`
-
-> Add `vercel.json` at root for SPA routing:
-> ```json
-> { "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }] }
-> ```
+## Deploy on Vercel
+Import repo → Framework: Vite → Output: dist → Deploy.
+`vercel.json` included for SPA routing.
