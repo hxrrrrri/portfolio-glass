@@ -118,7 +118,7 @@ export default function App() {
       <div className="orb orb-3" aria-hidden="true"/>
       <div className="orb orb-4" aria-hidden="true"/>
 
-      <LuxuryCursor/>
+      {!("ontouchstart" in window) && <LuxuryCursor/>}
 
       <div style={{ position:'relative', zIndex:1, minHeight:'100vh' }}>
         <Navbar/>
