@@ -5,8 +5,8 @@ export default function Footer() {
     <footer style={{ marginTop:'100px', borderTop:'1px solid rgba(255,255,255,0.045)', background:'rgba(0,0,0,0.25)', backdropFilter:'blur(28px)', WebkitBackdropFilter:'blur(28px)', padding:'48px var(--px)' }}>
       <div style={{ display:'flex', flexWrap:'wrap', justifyContent:'space-between', alignItems:'center', gap:'24px' }}>
         <div>
-          <div style={{ fontSize:'16px', fontWeight:900, letterSpacing:'-0.04em', background:'linear-gradient(135deg,#fff,rgba(255,255,255,0.5))', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', marginBottom:'4px' }}>MR.K</div>
-          <div style={{ fontSize:'10px', fontWeight:600, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.18)' }}>Harisankar S. © 2025</div>
+          <div style={{ fontSize:'16px', fontWeight:900, letterSpacing:'-0.04em', background:'linear-gradient(135deg,#fff,rgba(255,255,255,0.5))', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', marginBottom:'4px' }}>hxrrrrri.</div>
+          <div style={{ fontSize:'10px', fontWeight:600, letterSpacing:'0.14em', textTransform:'uppercase', color:'rgba(255,255,255,0.18)' }}>Harisankar S. © 2026</div>
         </div>
         <nav style={{ display:'flex', gap:'24px' }}>
           {links.map(([to, label]) => (

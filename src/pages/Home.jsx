@@ -156,18 +156,18 @@ export default function Home() {
             {/* Tag pill */}
             <div ref={tagRef} style={{ marginBottom:'36px' }}>
               <span style={{ display:'inline-flex', alignItems:'center', gap:'10px', padding:'7px 18px', borderRadius:'999px', background:'rgba(255,255,255,0.045)', border:'1px solid rgba(255,255,255,0.09)', boxShadow:'inset 0 1px 0 rgba(255,255,255,0.06)' }}>
-                <span style={{ width:'5px', height:'5px', borderRadius:'50%', background:'var(--accent)', boxShadow:'0 0 8px var(--accent)', animation:'pulse 2s ease-in-out infinite', flexShrink:0 }}/>
+                <span style={{ width:'5px', height:'5px', borderRadius:'50%', background:'var(--a1)', boxShadow:'0 0 8px var(--a1)', animation:'pulse 2s ease-in-out infinite', flexShrink:0 }}/>
                 <span style={{ fontSize:'10px', fontWeight:700, letterSpacing:'0.24em', textTransform:'uppercase', color:'rgba(255,255,255,0.38)' }}>Final Year · CSE (AI) · MBCET · 2026</span>
               </span>
             </div>
 
             {/* Headline */}
-            <h1 ref={h1Ref} className="grad-text-warm" style={{ fontSize:'clamp(4.2rem, 10vw, 10rem)', fontWeight:900, lineHeight:0.86, letterSpacing:'-0.048em', marginBottom:'20px', whiteSpace:'nowrap' }}>
-              Harisankar S<span style={{ WebkitTextFillColor:'var(--accent)' }}>.</span>
+            <h1 ref={h1Ref} style={{ fontSize:'clamp(4.2rem, 10vw, 10rem)', fontWeight:900, lineHeight:0.86, letterSpacing:'-0.048em', marginBottom:'20px', whiteSpace:'nowrap', color:'rgba(255,255,255,0.97)' }}>
+              Harisankar S<span style={{ WebkitTextFillColor:'var(--a1)' }}>.</span>
             </h1>
 
             {/* Accent line */}
-            <div ref={lineRef} style={{ height:'2px', width:'80px', background:'linear-gradient(90deg, var(--accent), transparent)', marginBottom:'22px', borderRadius:'2px' }}/>
+            <div ref={lineRef} style={{ height:'2px', width:'80px', background:'linear-gradient(90deg, var(--a1), transparent)', marginBottom:'22px', borderRadius:'2px' }}/>
 
             {/* Role */}
             <div ref={roleRef} style={{ display:'flex', alignItems:'center', gap:'14px', marginBottom:'28px' }}>
@@ -205,8 +205,8 @@ export default function Home() {
                     position:'relative', overflow:'hidden',
                   }}>
                   {/* Accent top line on first item */}
-                  {s.accent && <div style={{ position:'absolute', top:0, left:0, right:0, height:'2px', background:'linear-gradient(90deg, var(--accent), transparent)' }}/>}
-                  <div style={{ fontSize:'7px', fontWeight:900, letterSpacing:'0.28em', textTransform:'uppercase', color:'var(--accent)', marginBottom:'10px' }}>{s.label}</div>
+                  {s.accent && <div style={{ position:'absolute', top:0, left:0, right:0, height:'2px', background:'linear-gradient(90deg, var(--a1), transparent)' }}/>}
+                  <div style={{ fontSize:'7px', fontWeight:900, letterSpacing:'0.28em', textTransform:'uppercase', color:'var(--a1)', marginBottom:'10px' }}>{s.label}</div>
                   <div className="grad-text" style={{ fontSize:'34px', fontWeight:900, lineHeight:1, marginBottom:'6px', letterSpacing:'-0.04em' }}>{s.value}</div>
                   <div style={{ fontSize:'9px', fontWeight:600, letterSpacing:'0.12em', textTransform:'uppercase', color:'rgba(255,255,255,0.26)' }}>{s.sub}</div>
                 </div>
@@ -220,8 +220,8 @@ export default function Home() {
             {/* Open to Work badge */}
             <div ref={badgeRef} style={{ position:'absolute', top:'-14px', right:'-14px', zIndex:20 }}>
               <div style={{ position:'relative', display:'inline-flex' }}>
-                <div style={{ position:'absolute', inset:'-10px', borderRadius:'16px', background:'rgba(255,77,45,0.32)', filter:'blur(18px)', zIndex:0 }}/>
-                <div className="g-accent" style={{ position:'relative', zIndex:1, display:'flex', alignItems:'center', gap:'9px', padding:'10px 18px', borderRadius:'13px', boxShadow:'0 8px 32px rgba(255,77,45,0.50), inset 0 1.5px 0 rgba(255,255,255,0.28)' }}>
+                <div style={{ position:'absolute', inset:'-10px', borderRadius:'16px', background:'rgba(var(--a-r),var(--a-g),var(--a-b),0.32)', filter:'blur(18px)', zIndex:0 }}/>
+                <div className="g-accent" style={{ position:'relative', zIndex:1, display:'flex', alignItems:'center', gap:'9px', padding:'10px 18px', borderRadius:'13px', boxShadow:'0 8px 32px rgba(var(--a-r),var(--a-g),var(--a-b),0.50), inset 0 1.5px 0 rgba(255,255,255,0.28)' }}>
                   <span style={{ width:'7px', height:'7px', borderRadius:'50%', flexShrink:0, background:'#22ff88', boxShadow:'0 0 12px #22ff88', animation:'blink 1.1s ease-in-out infinite' }}/>
                   <span style={{ fontSize:'10px', fontWeight:900, textTransform:'uppercase', letterSpacing:'0.18em', color:'#fff', whiteSpace:'nowrap' }}>Open to Work</span>
                 </div>
@@ -269,7 +269,7 @@ export default function Home() {
             {Array(6).fill(marqueeItems).flat().map((t,i) => (
               <span key={i} style={{ display:'inline-flex', alignItems:'center', fontSize:'9px', fontWeight:800, letterSpacing:'0.26em', textTransform:'uppercase', color:'rgba(255,255,255,0.15)', flexShrink:0, padding:'0 26px' }}>
                 {t}
-                <span style={{ width:'3px', height:'3px', borderRadius:'50%', background:'rgba(255,77,45,0.50)', margin:'0 26px', flexShrink:0 }}/>
+                <span style={{ width:'3px', height:'3px', borderRadius:'50%', background:'rgba(var(--a-r),var(--a-g),var(--a-b),0.50)', margin:'0 26px', flexShrink:0 }}/>
               </span>
             ))}
           </div>
@@ -281,13 +281,13 @@ export default function Home() {
 
         {/* Projects */}
         <div className="g2 g-shine g-hi2 card-lift" style={{ padding:'48px', borderRadius:'28px', display:'flex', flexDirection:'column', justifyContent:'space-between', minHeight:'280px', position:'relative', overflow:'hidden' }}>
-          <div style={{ position:'absolute', top:0, right:0, width:'200px', height:'200px', background:'radial-gradient(circle at 70% 30%, rgba(255,77,45,0.06), transparent 65%)', pointerEvents:'none' }}/>
+          <div style={{ position:'absolute', top:0, right:0, width:'200px', height:'200px', background:'radial-gradient(circle at 70% 30%, rgba(var(--a-r),var(--a-g),var(--a-b),0.06), transparent 65%)', pointerEvents:'none' }}/>
           <div style={{ position:'relative', zIndex:1 }}>
             <div className="text-label" style={{ marginBottom:'22px' }}>+002 / Featured</div>
             <h2 className="grad-text" style={{ fontSize:'34px', fontWeight:900, lineHeight:0.92, letterSpacing:'-0.035em', marginBottom:'18px' }}>Selected<br/>Works.</h2>
             <p style={{ fontSize:'13px', color:'rgba(255,255,255,0.38)', lineHeight:1.72 }}>Geospatial AI · NLP pipelines · Autonomous robotics · Full-stack platforms.</p>
           </div>
-          <Link to="/projects" style={{ display:'inline-flex', alignItems:'center', gap:'8px', marginTop:'32px', fontSize:'11px', fontWeight:800, letterSpacing:'0.12em', textTransform:'uppercase', color:'var(--accent)', textDecoration:'none', position:'relative', zIndex:1 }}
+          <Link to="/projects" style={{ display:'inline-flex', alignItems:'center', gap:'8px', marginTop:'32px', fontSize:'11px', fontWeight:800, letterSpacing:'0.12em', textTransform:'uppercase', color:'var(--a1)', textDecoration:'none', position:'relative', zIndex:1 }}
             onMouseEnter={e=>e.currentTarget.style.gap='14px'}
             onMouseLeave={e=>e.currentTarget.style.gap='8px'}
             className="transition-all"
@@ -304,7 +304,7 @@ export default function Home() {
             <h2 className="grad-text" style={{ fontSize:'34px', fontWeight:900, lineHeight:0.92, letterSpacing:'-0.035em', marginBottom:'18px' }}>Creative<br/>Problem Solver.</h2>
             <p style={{ fontSize:'13px', color:'rgba(255,255,255,0.38)', lineHeight:1.72 }}>Mechanical keyboards. Figma. Code. Shipping things that actually work.</p>
           </div>
-          <Link to="/about" style={{ display:'inline-flex', alignItems:'center', gap:'8px', marginTop:'32px', fontSize:'11px', fontWeight:800, letterSpacing:'0.12em', textTransform:'uppercase', color:'var(--accent)', textDecoration:'none', position:'relative', zIndex:1 }}>
+          <Link to="/about" style={{ display:'inline-flex', alignItems:'center', gap:'8px', marginTop:'32px', fontSize:'11px', fontWeight:800, letterSpacing:'0.12em', textTransform:'uppercase', color:'var(--a1)', textDecoration:'none', position:'relative', zIndex:1 }}>
             Read More <Arr size={13}/>
           </Link>
         </div>

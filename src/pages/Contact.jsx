@@ -21,16 +21,16 @@ export default function Contact() {
           {/* LEFT */}
           <div className="ct-l" style={{display:'flex',flexDirection:'column',gap:'14px'}}>
             <div className="g2 g-hi2" style={{padding:'52px',borderRadius:'28px',flex:1,position:'relative',overflow:'hidden'}}>
-              <div style={{position:'absolute',top:0,left:0,width:'260px',height:'260px',background:'radial-gradient(circle at 20% 20%,rgba(255,77,45,0.07),transparent 62%)',pointerEvents:'none'}}/>
+              <div style={{position:'absolute',top:0,left:0,width:'260px',height:'260px',background:'radial-gradient(circle at 20% 20%,rgba(var(--a-r),var(--a-g),var(--a-b),0.07),transparent 62%)',pointerEvents:'none'}}/>
               <div style={{position:'relative',zIndex:1}}>
                 <div className="text-label" style={{marginBottom:'18px'}}>Contact / 001</div>
-                <h1 className="grad-text" style={{fontSize:'clamp(4rem,7vw,7rem)',fontWeight:900,lineHeight:0.85,letterSpacing:'-0.055em',marginBottom:'28px'}}>Lab<span style={{WebkitTextFillColor:'var(--accent)'}}>.</span></h1>
+                <h1 className="grad-text" style={{fontSize:'clamp(4rem,7vw,7rem)',fontWeight:900,lineHeight:0.85,letterSpacing:'-0.055em',marginBottom:'28px'}}>Lab<span style={{WebkitTextFillColor:'var(--a1)'}}>.</span></h1>
                 <p style={{fontSize:'14px',color:'rgba(255,255,255,0.44)',lineHeight:1.80,maxWidth:'280px',marginBottom:'48px'}}>Open to full-time roles, freelance collaborations, and interesting projects. I respond fast.</p>
                 <div style={{fontSize:'8px',fontWeight:900,letterSpacing:'0.24em',textTransform:'uppercase',color:'rgba(255,255,255,0.22)',marginBottom:'14px'}}>Find me —</div>
                 {[{label:'LinkedIn',href:socials.linkedin},{label:'GitHub',href:socials.github},{label:'Email',href:`mailto:${socials.email}`}].map(({label,href})=>(
                   <a key={label} href={href} target={label!=='Email'?'_blank':undefined} rel="noopener noreferrer"
                     style={{display:'flex',alignItems:'center',justifyContent:'space-between',padding:'15px 0',borderBottom:'1px solid rgba(255,255,255,0.05)',fontSize:'18px',fontWeight:800,color:'rgba(255,255,255,0.58)',textDecoration:'none',transition:'color 0.22s, padding-left 0.22s'}}
-                    onMouseEnter={e=>{e.currentTarget.style.color='var(--accent)';e.currentTarget.style.paddingLeft='8px'}}
+                    onMouseEnter={e=>{e.currentTarget.style.color='var(--a1)';e.currentTarget.style.paddingLeft='8px'}}
                     onMouseLeave={e=>{e.currentTarget.style.color='rgba(255,255,255,0.58)';e.currentTarget.style.paddingLeft='0'}}
                   >{label}<Arr s={18}/></a>
                 ))}
@@ -48,17 +48,17 @@ export default function Contact() {
 
           {/* RIGHT */}
           <div className="ct-r g3 g-hi2" style={{padding:'60px',borderRadius:'28px',position:'relative',overflow:'hidden'}}>
-            <div style={{position:'absolute',top:0,right:0,width:'350px',height:'350px',background:'radial-gradient(circle at 75% 20%,rgba(255,77,45,0.06),transparent 62%)',pointerEvents:'none'}}/>
+            <div style={{position:'absolute',top:0,right:0,width:'350px',height:'350px',background:'radial-gradient(circle at 75% 20%,rgba(var(--a-r),var(--a-g),var(--a-b),0.06),transparent 62%)',pointerEvents:'none'}}/>
             {sent?(
               <div style={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',height:'100%',gap:'20px',minHeight:'460px',position:'relative',zIndex:1}}>
-                <div className="grad-text-warm" style={{fontSize:'80px',fontWeight:900,letterSpacing:'-0.05em',lineHeight:1}}>Sent<span style={{WebkitTextFillColor:'var(--accent)'}}>.</span></div>
+                <div className="grad-text-warm" style={{fontSize:'80px',fontWeight:900,letterSpacing:'-0.05em',lineHeight:1}}>Sent<span style={{WebkitTextFillColor:'var(--a1)'}}>.</span></div>
                 <p style={{fontSize:'11px',fontWeight:700,color:'rgba(255,255,255,0.35)',letterSpacing:'0.18em',textTransform:'uppercase'}}>Thanks! I'll get back to you soon.</p>
               </div>
             ):(
               <div style={{position:'relative',zIndex:1}}>
                 <div style={{marginBottom:'48px'}}>
                   <div className="text-label" style={{marginBottom:'14px'}}>Start a Project</div>
-                  <h2 className="grad-text" style={{fontSize:'clamp(2rem,4vw,3.5rem)',fontWeight:900,lineHeight:0.92,letterSpacing:'-0.045em'}}>Let's build<br/>something great.</h2>
+                  <h2 className="grad-text" style={{fontSize:'clamp(2rem,4vw,3.5rem)',fontWeight:900,lineHeight:1.0,letterSpacing:'-0.045em',paddingBottom:'0.12em',overflow:'visible',display:'inline-block',width:'100%'}}>Let's build<br/>something great.</h2>
                 </div>
                 <form onSubmit={e=>{e.preventDefault();setSent(true)}} style={{display:'flex',flexDirection:'column',gap:'20px'}}>
                   {[{n:'01',l:'Full Name',t:'text',k:'name',p:'Your name'},{n:'02',l:'Email Address',t:'email',k:'email',p:'your@email.com'}].map(({n,l,t,k,p})=>(
