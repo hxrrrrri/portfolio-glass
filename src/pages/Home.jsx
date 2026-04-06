@@ -54,7 +54,7 @@ export default function Home() {
 
   const stats=[
     {label:'SIH',value:'2×',sub:'National Winner',accent:true},
-    {label:'Projects',value:'6+',sub:'Shipped End-to-End'},
+    {label:'Projects',value:'8+',sub:'Shipped End-to-End'},
     {label:'Stack',value:'15+',sub:'Technologies'},
     {label:'Base',value:'KL',sub:'Kerala, India'},
   ]
